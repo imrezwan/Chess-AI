@@ -16,8 +16,6 @@ BLACK_ROOK = 'bR'
 EMPTY_PIECE = 'E'
 
 
-
-
 piece_init_pos = [
     [WHITE_ROOK,     WHITE_QUEEN,     WHITE_KING,     WHITE_ROOK],
     [WHITE_PAWN,     WHITE_PAWN,      WHITE_PAWN,     WHITE_PAWN],

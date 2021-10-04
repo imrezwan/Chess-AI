@@ -5,6 +5,7 @@ from colors import *
 from board import Board
 from constants import *
 from board_utility import *
+from piece import *
 
 pygame.init()
 
@@ -21,17 +22,23 @@ chess_board = Board(SCREEN )
 
 all_pieces = pygame.sprite.Group()
 
-
-        
-
-
-
+for i in range(0,len(piece_init_pos)):
+    for j in range(0,len(piece_init_pos[i])):
+        # i is index towards x-axis , whereas j is index towards y-axis
+        if isPiece(piece_init_pos[i][j]):
+            image_path = 'images/'+piece_init_pos[i][j]+'.png'
+            temp_piece = Piece(image_path)
+            print(i,j)
+            temp_piece.set_center(coordinate_to_center_pixel(j,i))
+            all_pieces.add(temp_piece)
 
 while True:
     # codes here
     
     
     pygame.display.update()
+    chess_board.draw()
+    all_pieces.draw(SCREEN)
 
     for event in pygame.event.get():
         

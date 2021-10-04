@@ -10,6 +10,11 @@ def coordinate_to_top_left_pixel(pos_x, pos_y):
     pixel_y = pos_y * TILE_HEIGHT
     return (pixel_x, pixel_y) 
 
+def coordinate_to_center_pixel(pos_x, pos_y):
+    pixel_x = pos_x * TILE_WIDTH + int(TILE_WIDTH/2)
+    pixel_y = pos_y * TILE_HEIGHT + int(TILE_HEIGHT/2)
+    return (pixel_x, pixel_y) 
+
 def pixel_to_pixel_top_left(pixel_x, pixel_y):
     pos_x , pos_y = pixel_to_coordinate( pixel_x, pixel_y )
     pixel_x = pos_x * TILE_WIDTH
@@ -18,6 +23,12 @@ def pixel_to_pixel_top_left(pixel_x, pixel_y):
 
 def pixel_to_center_pixel(pixel_x, pixel_y):
     pos_x , pos_y = pixel_to_coordinate( pixel_x, pixel_y )
-    pixel_x = pos_x * TILE_WIDTH + int(TILE_WIDTH/2)
-    pixel_y = pos_y * TILE_HEIGHT+ int(TILE_HEIGHT/2)
+    pixel_x , pixel_y = coordinate_to_center_pixel(pos_x, pos_y)
     return (pixel_x, pixel_y)
+
+
+def isPiece(piece):
+    if piece == EMPTY_PIECE:
+        return False
+    else:
+        return True    

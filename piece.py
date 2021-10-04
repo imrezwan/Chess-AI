@@ -9,7 +9,8 @@ class Piece(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.center = (0, 0)
 
-
+    def set_center(self, pos):
+        self.rect.center = pos
 
     def draw(self, surface):
         surface.blit(self.image, self.rect)    
