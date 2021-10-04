@@ -21,7 +21,9 @@ chess_board = Board(SCREEN )
 
 all_pieces = pygame.sprite.Group()
 
-for()
+
+        
+
 
 
 
