@@ -1,8 +1,9 @@
-
+import pygame
 
 ROW , COLUMN = 8, 4
 SCREEN_HEIGHT, SCREEN_WIDTH = 720, 360
 TILE_HEIGHT, TILE_WIDTH = int(SCREEN_HEIGHT/ ROW) , int(SCREEN_WIDTH/COLUMN)
+SCREEN = pygame.display.set_mode((SCREEN_WIDTH,SCREEN_HEIGHT))
 
 WHITE_QUEEN = 'wQ'
 WHITE_KING = 'wK'
@@ -16,7 +17,7 @@ BLACK_ROOK = 'bR'
 EMPTY_PIECE = 'E'
 
 
-piece_init_pos = [
+all_piece_pos = [
     [WHITE_ROOK,     WHITE_QUEEN,     WHITE_KING,     WHITE_ROOK],
     [WHITE_PAWN,     WHITE_PAWN,      WHITE_PAWN,     WHITE_PAWN],
     [EMPTY_PIECE,    EMPTY_PIECE,     EMPTY_PIECE,    EMPTY_PIECE],

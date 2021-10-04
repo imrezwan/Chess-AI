@@ -1,3 +1,4 @@
+from colors import SELECETED_COLOR
 from constants import *
 
 def pixel_to_coordinate( pixel_x, pixel_y):
@@ -32,3 +33,4 @@ def isPiece(piece):
         return False
     else:
         return True    
+
