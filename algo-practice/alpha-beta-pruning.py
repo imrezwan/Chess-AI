@@ -37,7 +37,7 @@ def minimax(nodeIndex, currentDepth, isMaxTurn, alpha, beta):
             beta = min(beta , worst)
 
             # alpha wants to maximize the value, beta wants to minimize 
-            # if alpha>=beta , then there is no chance to change alpha value, so we don't need to look into the other leaf
+            # if alpha>=beta , then there is no chance to change beta value, so we don't need to look into the other leaf
             # that's ALPHA BETA PRUNING
             if alpha >= beta:
                 break
