@@ -44,6 +44,7 @@ def select_draw_piece_square(selectedX, selectedY):
 selectedX, selectedY = -1,-1
 
 
+isAlreadySelect = False
 
 while True:
     # codes here
@@ -61,12 +62,21 @@ while True:
             sys.exit()
         elif event.type == MOUSEBUTTONDOWN:
             # print("Clcikecd:    ", str(pygame.mouse.get_pos()))
-            selectedX, selectedY = pixel_to_coordinate(*pygame.mouse.get_pos())
+            
+            
+            if isAlreadySelect:
+                selectedX, selectedY = -1,-1
+                isAlreadySelect = not isAlreadySelect
+            else:
+                selectedX, selectedY = pixel_to_coordinate(*pygame.mouse.get_pos())
 
 
     if selectedX != -1 and selectedY != -1 and all_piece_pos[selectedY][selectedX] != EMPTY_PIECE:
         select_draw_piece_square(selectedX, selectedY)
         select_draw_possible_moves_square(selectedX, selectedY)
+        isAlreadySelect = not isAlreadySelect
+
+    
 
     FramePerSec.tick(FPS)
 
