@@ -43,6 +43,8 @@ def select_draw_piece_square(selectedX, selectedY):
 
 selectedX, selectedY = -1,-1
 
+
+
 while True:
     # codes here
     
@@ -64,9 +66,7 @@ while True:
 
     if selectedX != -1 and selectedY != -1 and all_piece_pos[selectedY][selectedX] != EMPTY_PIECE:
         select_draw_piece_square(selectedX, selectedY)
-        
         select_draw_possible_moves_square(selectedX, selectedY)
-        #show_possible_moves(all_piece_pos[selectedY, selectedY])
 
     FramePerSec.tick(FPS)
 
