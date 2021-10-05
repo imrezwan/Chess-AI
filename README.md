@@ -1,6 +1,12 @@
 # Chess-AI ( **IN PROGRESS** )
 Chess AI using Min-Max Algorithm and Alpha Beta Pruning
 
+# How to use
+1. Install python in your system
+2. Install 'pygame' framework<br>
+      ``` pip install pygame ```
+3. Clone the repo
+    ``` git clone https://github.com/rezwan2525/Chess-AI.git```
 
 # Resources
 
